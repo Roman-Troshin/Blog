@@ -7,7 +7,7 @@ const Div = styled.div`
 export const App = () => {
 	return (
 		<Div>
-			<i class="fa fa-bath " aria-hidden="true"></i>
+			<i className="fa fa-bath " aria-hidden="true"></i>
 			<div>123</div>
 		</Div>
 	);
