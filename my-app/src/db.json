@@ -4,42 +4,21 @@
       "id": "001",
       "login": "Roman",
       "password": "qwerty123",
-      "registed_at": "2050-09-22",
+      "registered_at": "2050-09-22",
       "role_id": 0
     },
     {
-      "id": "cb6e",
-      "login": "andrey",
+      "id": "8983",
+      "login": "sdfsdfs",
       "password": "qwerty123",
-      "registed_at": "2038-04-15 19:58",
+      "registered_at": "2047-08-03 20:51",
       "role_id": 2
     },
     {
-      "id": "cfbb",
-      "login": "alex",
+      "id": "0559",
+      "login": "sdfsdf",
       "password": "qwerty123",
-      "registed_at": "2053-08-14 14:19",
-      "role_id": 2
-    },
-    {
-      "id": "f73e",
-      "login": "vasiliy",
-      "password": "qwerty123",
-      "registed_at": "2044-03-08 14:41",
-      "role_id": 2
-    },
-    {
-      "id": "41fb",
-      "login": "serafim",
-      "password": "qwerty123",
-      "registed_at": "2063-05-21 13:40",
-      "role_id": 2
-    },
-    {
-      "id": "920e",
-      "login": "vasia",
-      "password": "qwerty123",
-      "registed_at": "2035-10-04 01:47",
+      "registered_at": "2049-07-03 12:22",
       "role_id": 2
     }
   ],
