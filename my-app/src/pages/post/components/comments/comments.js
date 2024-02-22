@@ -8,8 +8,7 @@ import { selectUserId } from '../../../../selectors';
 import { addCommentAsync } from '../../../../actions';
 
 const CommentsContainer = ({ className, comments, postId }) => {
-	console.log('comments:', comments);
-	console.log('comments[0]:', comments[0]);
+
 	const [newComment, setNewComment] = useState('');
 	const userId = useSelector(selectUserId);
 	const dispatch = useDispatch();
@@ -40,6 +39,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
 				{comments.map(({ id, author, content, publishedAt }) => (
 					<Comment
 						key={id}
+						postId={postId}
 						id={id}
 						author={author}
 						content={content}
