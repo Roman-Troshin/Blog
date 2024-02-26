@@ -10,12 +10,11 @@ const UsersContainer = ({ className }) => {
 	const [roles, setRoles] = useState([]);
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [shouldUpdateUserList, setShouldUpdateUserList] = useState(false);
-	console.log('shouldUpdateUserList:', shouldUpdateUserList)
+
 
 	const requestServer = useServerRequest();
 
 	useEffect(() => {
-		console.log('useEffect');
 		Promise.all([requestServer('fetchUsers'), requestServer('fetchRoles')]).then(
 			([usersRes, rolesRes]) => {
 				if (usersRes.error || rolesRes.error) {
@@ -32,7 +31,6 @@ const UsersContainer = ({ className }) => {
 	const onUserRemove = (userId) => {
 		requestServer('removeUser', userId).then(() => {
 		setShouldUpdateUserList(!shouldUpdateUserList);
-		console.log('shouldUpdateUserList:', shouldUpdateUserList)
 		});
 	};
 
