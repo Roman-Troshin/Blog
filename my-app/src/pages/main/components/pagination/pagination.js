@@ -11,7 +11,7 @@ const PaginationContainer = ({ className, page, lastPage, setPage }) => {
 				Предыдущая
 			</Button>
 			<Button>
-				<div  className="current-page">Страница: {page}</div>
+				<div className="current-page">Страница: {page}</div>
 			</Button>
 			<Button disabled={page === lastPage} onClick={() => setPage(page + 1)}>
 				Следующая
@@ -26,6 +26,9 @@ const PaginationContainer = ({ className, page, lastPage, setPage }) => {
 export const Pagination = styled(PaginationContainer)`
 	display: flex;
 	justify-content: center;
+	position: absolute;
+	bottom: 140px;
+	width: 100%;
 	margin: 0 0 20px;
 	padding: 0 35px;
 
@@ -34,37 +37,12 @@ export const Pagination = styled(PaginationContainer)`
 	}
 
 	& .current-page {
-		display: flex;
 		width: 100p%;
 		height: 32px;
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 29px;
 		text-align: center;
+
 	}
 `;
-
-/*
-const PaginationContainer = ({ className, page, lastPage, setPage }) => {
-	return (
-		<div className={className}>
-			<Button disabled={page === 1} onClick={() => setPage(1)}>
-				В начало
-			</Button>
-			<Button disabled={page === 1} onClick={() => setPage(page - 1)}>
-				Предыдущая
-			</Button>
-			<Button>
-				<div className="current-page">Страница: {page}</div>
-			</Button>
-			<Button disabled={page === lastPage} onClick={() => setPage(page + 1)}>
-				Следующая
-			</Button>
-			<Button disabled={page === lastPage} onClick={() => setPage(lastPage)}>
-				В конец
-			</Button>
-		</div>
-	);
-};
-
-*/
