@@ -20,6 +20,13 @@
       "password": "qwerty123",
       "registered_at": "2049-07-03 12:22",
       "role_id": 2
+    },
+    {
+      "login": "sergey",
+      "password": "qwerty123",
+      "registered_at": "2042-04-10 12:05",
+      "role_id": 2,
+      "id": "BtjOnvP"
     }
   ],
   "roles": [
