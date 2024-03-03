@@ -8,25 +8,18 @@
       "role_id": 0
     },
     {
-      "id": "8983",
-      "login": "sdfsdfs",
-      "password": "qwerty123",
-      "registered_at": "2047-08-03 20:51",
-      "role_id": 2
-    },
-    {
-      "id": "0559",
-      "login": "sdfsdf",
-      "password": "qwerty123",
-      "registered_at": "2049-07-03 12:22",
-      "role_id": 2
-    },
-    {
       "login": "sergey",
       "password": "qwerty123",
       "registered_at": "2042-04-10 12:05",
       "role_id": 2,
       "id": "BtjOnvP"
+    },
+    {
+      "login": "ivan",
+      "password": "qwerty123",
+      "registered_at": "2045-10-09 17:16",
+      "role_id": 1,
+      "id": "r6dwZ3X"
     }
   ],
   "roles": [
@@ -149,20 +142,6 @@
   ],
   "comments": [
     {
-      "id": "89fc",
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "2064-02-11 19:57",
-      "content": "comment 1"
-    },
-    {
-      "id": "4c9b",
-      "author_id": "001",
-      "post_id": "002",
-      "published_at": "2059-04-09 15:39",
-      "content": "comment 2"
-    },
-    {
       "id": "a6d8",
       "author_id": "001",
       "post_id": "002",
@@ -170,35 +149,49 @@
       "content": "comment 3"
     },
     {
-      "id": "8c1b",
       "author_id": "001",
-      "post_id": "013",
-      "published_at": "2048-11-16 19:06",
-      "content": "gfhgfh"
+      "post_id": "002",
+      "published_at": "2040-12-12 01:21",
+      "content": "hfgfghfgfh",
+      "id": "VB3Qw4X"
+    },
+    {
+      "author_id": "001",
+      "post_id": "009",
+      "published_at": "2037-01-16 21:00",
+      "content": "rrfgdfg",
+      "id": "yZbXXN7"
+    },
+    {
+      "author_id": "001",
+      "post_id": "009",
+      "published_at": "2034-06-18 10:48",
+      "content": "dfgdfg",
+      "id": "nKkct2n"
     }
   ],
   "sessions": [
     {
-      "id": "cf11",
-      "hash": "0.36142144375360429897625635931035503745079040527344",
+      "hash": "0.75548647619675590725307756656548008322715759277344",
       "user": {
-        "id": "001",
-        "login": "Roman",
+        "login": "ivan",
         "password": "qwerty123",
-        "registeredAt": "2050-09-22",
-        "roleId": 0
-      }
+        "registered_at": "2045-10-09 17:16",
+        "role_id": 2,
+        "id": "r6dwZ3X"
+      },
+      "id": 1
     },
     {
-      "id": "ff24",
-      "hash": "0.50578111359613342479235598148079589009284973144531",
+      "hash": "0.35738052311053203347057660721475258469581604003906",
       "user": {
-        "id": "001",
-        "login": "Roman",
+        "id": "r6dwZ3X",
+        "login": "ivan",
         "password": "qwerty123",
-        "registeredAt": "2050-09-22",
-        "roleId": 0
-      }
+        "registeredAt": "2045-10-09 17:16",
+        "roleId": 1
+      },
+      "id": 2
     }
   ]
 }

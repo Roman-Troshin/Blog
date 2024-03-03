@@ -5,7 +5,7 @@ import { Comments, PostContent, PostForm } from './components';
 import { Error, PrivateContent } from '../../components';
 import { useServerRequest } from '../../hooks';
 import { RESET_POST_DATA, loadPostAsync } from '../../actions';
-import { selectPost } from '../../selectors';
+import { selectPost, selectUserRole } from '../../selectors';
 import styled from 'styled-components';
 import { ROLE } from '../../constants';
 
@@ -18,10 +18,8 @@ const PostContainer = ({ className }) => {
 	const isEditing = !!useMatch('/post/:id/edit');
 	const requestServer = useServerRequest();
 	const post = useSelector(selectPost);
+	const userRole = useSelector(selectUserRole);
 
-
-	console.log('isCreating:', isCreating)
-	
 	useLayoutEffect(() => {
 		dispatch(RESET_POST_DATA);
 	}, [dispatch, isCreating]);
@@ -42,7 +40,7 @@ const PostContainer = ({ className }) => {
 		return null;
 	}
 
-	console.log('isCreating:', isCreating)
+	const isGuest = userRole === ROLE.GUEST;
 
 	const SpecificPostPage =
 		isCreating || isEditing ? (
@@ -54,7 +52,7 @@ const PostContainer = ({ className }) => {
 		) : (
 			<div className={className}>
 				<PostContent post={post} />
-				<Comments comments={post.comments} postId={post.id} />
+				{!isGuest && <Comments comments={post.comments} postId={post.id} />}
 			</div>
 		);
 
