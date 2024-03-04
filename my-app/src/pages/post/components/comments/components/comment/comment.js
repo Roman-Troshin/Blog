@@ -5,6 +5,7 @@ import { openModal, CLOSE_MODAL, removeCommentAsync } from '../../../../../../ac
 import { selectUserRole } from '../../../../../../selectors';
 import { ROLE } from '../../../../../../constants';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const CommentContainer = ({ className, postId, id, author, publishedAt, content }) => {
 	const dispatch = useDispatch();
@@ -25,7 +26,6 @@ const CommentContainer = ({ className, postId, id, author, publishedAt, content 
 	};
 
 	const isAdminOrModerator = [ROLE.ADMIN, ROLE.MODERATOR].includes(userRole);
-	console.log('isAdminOrModerator:', isAdminOrModerator);
 
 	return (
 		<div className={className}>
@@ -90,3 +90,11 @@ export const Comment = styled(CommentContainer)`
 		display: flex;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+};

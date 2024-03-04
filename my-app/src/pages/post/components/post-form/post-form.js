@@ -7,6 +7,7 @@ import { sanitizeContent } from './utils/sanitize-content';
 import { useDispatch } from 'react-redux';
 import { savePostAsync } from '../../../../actions';
 import { useServerRequest } from '../../../../hooks';
+import { PROP_TYPE } from '../../../../constants';
 
 const PostFormContainer = ({
 	className,
@@ -27,8 +28,7 @@ const PostFormContainer = ({
 
 	const onSave = () => {
 		const newContent = sanitizeContent(contentRef.current.innerText);
-		console.log('newContent:', newContent)
-
+		console.log('newContent:', newContent);
 
 		dispatch(
 			savePostAsync(requestServer, {
@@ -55,7 +55,9 @@ const PostFormContainer = ({
 				id={id}
 				publishedAt={publishedAt}
 				margin="20px 0"
-				editButton={<Icon id="fa-floppy-o" size="21px" margin="0 10px 0 0" onClick={onSave} />}
+				editButton={
+					<Icon id="fa-floppy-o" size="21px" margin="0 10px 0 0" onClick={onSave} />
+				}
 			/>
 			<div
 				ref={contentRef}
@@ -82,3 +84,7 @@ export const PostForm = styled(PostFormContainer)`
 		white-space: pre-line;
 	}
 `;
+
+PostForm.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};
